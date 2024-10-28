@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Luca Milan - Professiona Profile</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<!-- Favicon links -->
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="icons/site.webmanifest">
+	<link rel="shortcut icon" href="icons/favicon.ico">
+	<style>
+		.top-bar {
+			width: 100%;
+			height: 5px;
+			background-color: #2c3e50;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+		/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+		body {
+			margin: 0;
+			padding: 20px 60px;
+			/* Margine interno per dare spazio ai lati */
+			max-width: 1200px;
+			/* Limita la larghezza massima del contenuto */
+			margin-left: auto;
+			margin-right: auto;
+			/* Centra il contenuto della pagina */
+			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+			font-size: var(--vscode-markdown-font-size, 14px);
+			line-height: var(--vscode-markdown-line-height, 22px);
+			word-wrap: break-word;
+		}
+
+		#code-csp-warning {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: white;
+			margin: 16px;
+			text-align: center;
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: #444444;
+			cursor: pointer;
+			padding: 6px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+		}
+
+		#code-csp-warning:hover {
+			text-decoration: none;
+			background-color: #007acc;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+		}
+
+		body.scrollBeyondLastLine {
+			margin-bottom: calc(100vh - 22px);
+		}
+
+		body.showEditorSelection .code-line {
+			position: relative;
+		}
+
+		body.showEditorSelection .code-active-line:before,
+		body.showEditorSelection .code-line:hover:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+			height: 100%;
+		}
+
+		body.showEditorSelection li.code-active-line:before,
+		body.showEditorSelection li.code-line:hover:before {
+			left: -30px;
+		}
+
+		.vscode-light.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.15);
+		}
+
+		.vscode-light.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.40);
+		}
+
+		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-dark.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.vscode-dark.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.60);
+		}
+
+		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 160, 0, 0.7);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 160, 0, 1);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
+
+		hr {
+			border: 0;
+			height: 2px;
+			border-bottom: 2px solid;
+		}
+
+		h1 {
+			padding-bottom: 0.3em;
+			line-height: 1.2;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-weight: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table>thead>tr>th {
+			text-align: left;
+			border-bottom: 1px solid;
+		}
+
+		table>thead>tr>th,
+		table>thead>tr>td,
+		table>tbody>tr>th,
+		table>tbody>tr>td {
+			padding: 5px 10px;
+		}
+
+		table>tbody>tr+tr>td {
+			border-top: 1px solid;
+		}
+
+		blockquote {
+			margin: 0 7px 0 5px;
+			padding: 0 16px 0 10px;
+			border-left-width: 5px;
+			border-left-style: solid;
+		}
+
+		code {
+			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+			font-size: 1em;
+			line-height: 1.357em;
+		}
+
+		body.wordWrap pre {
+			white-space: pre-wrap;
+		}
+
+		pre:not(.hljs),
+		pre.hljs code>div {
+			padding: 16px;
+			border-radius: 3px;
+			overflow: auto;
+		}
+
+		pre code {
+			color: var(--vscode-editor-foreground);
+			tab-size: 4;
+		}
+
+		/** Theming */
+
+		.vscode-light pre {
+			background-color: rgba(220, 220, 220, 0.4);
+		}
+
+		.vscode-dark pre {
+			background-color: rgba(10, 10, 10, 0.4);
+		}
+
+		.vscode-high-contrast pre {
+			background-color: rgb(0, 0, 0);
+		}
+
+		.vscode-high-contrast h1 {
+			border-color: rgb(0, 0, 0);
+		}
+
+		.vscode-light table>thead>tr>th {
+			border-color: rgba(0, 0, 0, 0.69);
+		}
+
+		.vscode-dark table>thead>tr>th {
+			border-color: rgba(255, 255, 255, 0.69);
+		}
+
+		.vscode-light h1,
+		.vscode-light hr,
+		.vscode-light table>tbody>tr+tr>td {
+			border-color: rgba(0, 0, 0, 0.18);
+		}
+
+		.vscode-dark h1,
+		.vscode-dark hr,
+		.vscode-dark table>tbody>tr+tr>td {
+			border-color: rgba(255, 255, 255, 0.18);
+		}
+	</style>
+
+	<style>
+		/* Tomorrow Theme */
+		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+		/* Tomorrow Comment */
+		.hljs-comment,
+		.hljs-quote {
+			color: #8e908c;
+		}
+
+		/* Tomorrow Red */
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class,
+		.hljs-regexp,
+		.hljs-deletion {
+			color: #c82829;
+		}
+
+		/* Tomorrow Orange */
+		.hljs-number,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params,
+		.hljs-meta,
+		.hljs-link {
+			color: #f5871f;
+		}
+
+		/* Tomorrow Yellow */
+		.hljs-attribute {
+			color: #eab700;
+		}
+
+		/* Tomorrow Green */
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-addition {
+			color: #718c00;
+		}
+
+		/* Tomorrow Blue */
+		.hljs-title,
+		.hljs-section {
+			color: #4271ae;
+		}
+
+		/* Tomorrow Purple */
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: #8959a8;
+		}
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			color: #4d4d4c;
+			padding: 0.5em;
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: bold;
+		}
+	</style>
+
+	<style>
+		/*
+ * Markdown PDF CSS
+ */
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+			padding: 0 12px;
+		}
+
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			overflow-x: auto;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
+
+		pre:not(.hljs) {
+			padding: 23px;
+			line-height: 19px;
+		}
+
+		blockquote {
+			background: rgba(127, 127, 127, 0.1);
+			border-color: rgba(0, 122, 204, 0.5);
+		}
+
+		.emoji {
+			height: 1.4em;
+		}
+
+		code {
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		/* for inline code */
+		:not(pre):not(.hljs)>code {
+			color: #C9AE75;
+			/* Change the old color so it seems less like an error */
+			font-size: inherit;
+		}
+
+		/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+		.page {
+			page-break-after: always;
+		}
+	</style>
+
+	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+	<script>
+		mermaid.initialize({
+			startOnLoad: true,
+			theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+				? 'dark'
+				: 'default'
+		});
+	</script>
+	<div class="top-bar"></div>
+
+	<h1 id="luca-milan">Luca Milan</h1>
+	<p><strong>Technology Innovator, Public Speaker and Strategic Leader in Software Engineering</strong>
+	<p><i>Over 25 Years of Shaping the Digital Landscape</i></p>
+
+	<img src="lm.jpg" alt="Luca Milan" style="float: right; width: 120px;" /></p>
+	<p><strong>📍 Location</strong>: Piacenza, Italy <br>
+		<strong>🎂 Date of Birth</strong>: 13/11/1970<br>
+		<strong>☎️ Contact</strong>: +393286754036 | <a href="mailto:info@lucamilan.eu">info@lucamilan.eu</a> <br>
+		<strong>👉LinkedIn</strong>: <a
+			href="https://www.linkedin.com/in/lucamilan">https://www.linkedin.com/in/lucamilan</a><br>
+		<strong>👉GitHub</strong>: <a href="https://github.com/lucamilan">https://github.com/lucamilan</a><br>
+		<strong>👉Speaker</strong>: <a href="https://sessionize.com/lucamilan">https://sessionize.com/lucamilan</a>
+	</p>
+	<h2 id="%F0%9F%AA%AA-professional-profile">🪪 Professional Profile (Where code meets vision, innovation thrives.)
+	</h2>
+	<h4 id="%F0%9F%AA%AA-professional-profile-mantra"> ❜ Where code meets vision, innovation thrives ❜</h4>
+	<p>Technology leader with over 25 years of experience driving digital transformations and software innovations.
+		Combining deep technical expertise with strong strategic vision, I guide teams towards operational excellence
+		and technological innovation. Expert in making critical decisions on software architectures, technology stacks,
+		and implementation strategies that align technology with business objectives.
+	</p>
+	<h2 id="%F0%9F%94%91-key-technology-leadership-competencies">🔑 Key Technology Leadership Competencies</h2>
+	<ul>
+		<li>Defining and implementing strategic technology roadmaps</li>
+		<li>Managing technology portfolios and optimizing IT investments</li>
+		<li>Leading digital transformation initiatives and application modernization</li>
+		<li>Implementing Agile and DevOps methodologies at an organizational level</li>
+		<li>Architecting distributed systems and scalable cloud-native solutions</li>
+		<li>Process automation and CI/CD/CT pipeline optimization</li>
+		<li>Managing multidisciplinary and multicultural technical teams</li>
+		<li>Observability: Monitoring, Logging and Alerting best practices and platforms</li>
+	</ul>
+	<h2 id="advanced-technical-skills">&lt;/&gt; Advanced Technical Skills</h2>
+	<ul>
+		<li>Architectures: Microservices, Event-Driven, Serverless, Domain-Driven Design, Rest, SOA</li>
+		<li>Cloud &amp; Containerization: AWS, Azure, Google Cloud, Docker, Kubernetes</li>
+		<li>DevOps &amp; Automation: GitLab CI, Ansible, Terraform, Azure DevOps Pipeline, Github Actions</li>
+		<li>Languages: C#, Java, Python, JavaScript/TypeScript</li>
+		<li>Frontend: React, Angular, Vue.js</li>
+		<li>Backend: .NET Core, Spring Boot, Node.js</li>
+		<li>Databases: SQL Server, PostgreSQL, MongoDB, Cassandra, Redis, ElasticSearch</li>
+		<li>Messaging &amp; Streaming: Kafka, RabbitMQ, Apache Pulsar</li>
+		<li>AI &amp; Machine Learning: TensorFlow, PyTorch, scikit-learn, pandas</li>
+		<li>Open Source Software Adoption</li>
+		<li>Advance ETL and Data Platform, Modern Data Stack, Data Lakes, Data Warehouse</li>
+		<li>Observability: Grafana, Loki, InfluxDb, Graylog</li>
+	</ul>
+	<div style="page-break-after: always"></div>
+	<h2 id="%F0%9F%93%9C-professional-experience">📜 Professional Experience</h2>
+	<h3 id="%F0%9F%8F%A2-selecta-spa-part-of-datlas-group">🏢 Selecta S.p.A. (part of Datlas Group)</h3>
+	<p><strong>👨🏻‍💻Head of DevOps, Automation and Process Improvement</strong><br>
+		<em>August 2023 - Present | Milan, Lombardy, Italy</em>
+	</p>
+	<ul>
+		<li>Defined and implemented an enterprise-wide DevOps strategy, significantly reducing time-to-market for new
+			features</li>
+		<li>Led the adoption of Infrastructure as Code and Continuous Deployment practices, substantially increasing
+			release frequency</li>
+		<li>Implemented an automation framework that notably reduced operational costs and improved software quality
+		</li>
+		<li>Implemented analytics and KPI approaches across all teams and domains.</li>
+	</ul>
+	<p><strong>👨🏻‍💻Head of Digital, Architectures, Innovation and Delivery</strong><br>
+		<em>June 2022 - September 2023 | Milan, Lombardy, Italy</em>
+	</p>
+	<ul>
+		<li>Orchestrated the company's digital transformation, defining the technological architecture to support future
+			growth</li>
+		<li>Led the adoption of microservices and event-driven architectures, improving scalability and resilience of
+			core systems</li>
+		<li>Implemented an API-first strategy, opening new business opportunities and boosting revenue from third-party
+			integrations</li>
+		<li>Adapted &quot;team topology&quot; to better address challenges and delivery strategies</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-ot-consulting">🏢 OT Consulting</h3>
+	<p><strong>👨🏻‍💻Software Development Lead</strong><br>
+		<em>January 2021 - June 2022 | Reggio Emilia, Emilia-Romagna, Italy</em>
+	</p>
+	<ul>
+		<li>Designed and implemented cutting-edge security solutions for critical banking systems</li>
+		<li>Led the adoption of DevSecOps practices, integrating security into the software development lifecycle</li>
+		<li>Mentored development teams on coding best practices (DevOps, Automation and Monitoring) and modern software
+			architectures (Microservice and Kubernetes adoption)</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-myinvenio-an-ibm-company">🏢 myInvenio (an IBM Company)</h3>
+	<p><strong>👨🏻‍💻Head of Innovation</strong><br>
+		<em>May 2020 - December 2020 | Reggio Emilia, Emilia-Romagna, Italy</em>
+	</p>
+	<ul>
+		<li>Pioneered the integration of RPA and AI technologies in business processes, leading to substantial
+			improvements in operational efficiency</li>
+		<li>Led the development of Task Mining platform, now an integral part of IBM's offering</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-yoox-net-a-porter-group">🏢 YOOX NET-A-PORTER GROUP</h3>
+	<p><strong>👨🏻‍💻 Manager of Fulfilment Automation Engineering Team</strong><br>
+		<em>October 2018 - May 2020 | Milan Area, Italy</em>
+	</p>
+	<ul>
+		<li>Architected and implemented end-to-end automation solutions for fulfillment, significantly reducing order
+			processing times</li>
+		<li>Led the adoption of Kubernetes for container orchestration, improving scalability and achieving considerable
+			reduction in infrastructure costs</li>
+	</ul>
+	<p><strong>👨🏻‍💻Manager of Special Projects Team</strong><br>
+		<em>October 2016 - September 2018 | Milan Area, Italy</em>
+	</p>
+	<ul>
+		<li>Directed the development of innovative cloud-native solutions, including a real-time personalization
+			platform that notably increased conversions</li>
+		<li>Implemented a Feature Toggling and A/B Testing strategy, enabling more frequent and safer releases</li>
+	</ul>
+	<p><strong>👨🏻‍💻Tools Domain Manager</strong><br>
+		<em>October 2014 - September 2016 | Milan, Italy</em>
+	</p>
+	<ul>
+		<li>Led the modernization of the internal application portfolio, migrating from monolithic applications to
+			microservices</li>
+		<li>Implemented Continuous Integration and Delivery practices, achieving substantial reduction in time-to-market
+			for new features</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-mahiz-srl">🏢 Mahiz Srl</h3>
+	<p><strong>👔Co-Founder</strong><br>
+		<em>January 2014 - October 2014 | Piacenza, Italy</em>
+	</p>
+	<ul>
+		<li>Founded an IT consulting firm specializing in the development of secure, reliable, and scalable software
+			solutions</li>
+		<li>Managed the entire software development lifecycle, from requirements gathering to design, implementation,
+			testing, and release</li>
+		<li>Developed leadership and management skills by overseeing teams of developers and external collaborators</li>
+	</ul>
+	<p><strong>👔Founder</strong><br>
+		<em>November 2012 - October 2014 | Piacenza, Italy</em>
+	</p>
+	<ul>
+		<li>Led the company in developing web applications for business clients</li>
+		<li>Coordinated the development of high-quality software solutions to meet client needs</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-self-employed-with-vat-number">🏢 Self-Employed with VAT number</h3>
+	<p><strong>👨‍🔧Independent Software Developer &amp; Consultant</strong><br>
+		<em>January 1998 - October 2012 | Piacenza, Italy</em>
+	</p>
+	<ul>
+		<li>Designed and developed multi-tier applications and system integration solutions</li>
+		<li>Managed complex projects by defining scope, timelines, quality, and resources</li>
+		<li>Collaborated with clients to define requirements and provided training for personnel</li>
+		<li>Expert in Agile and Kanban methodologies, with proficiency in technologies such as C#, Javascript,
+			AngularJS, SignalR, RabbitMQ, ASP.NET MVC, MongoDB, SQL Server, and REST APIs</li>
+		<li>Designed and delivered high-quality software products, ensuring alignment with business objectives</li>
+		<li>Developed software solutions in the banking sector using technologies such as .NET 2.0/3.5, WCF, C#, JQuery,
+			CSS, and SQL Server</li>
+		<li>Managed project releases and dependencies, ensuring the final product met high standards of quality</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-step-spa">🏢 Step SpA</h3>
+	<p><strong>👨‍🔧Software Developer</strong><br>
+		<em>October 2003 - April 2004 | Piacenza, Italy</em>
+	</p>
+	<ul>
+		<li>Developed software solutions using ASP, Visual Basic, XML, Javascript, HTML, and SQL Server</li>
+		<li>Collaborated with project teams to plan and deliver business applications</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2-sysproject-reply-srl">🏢 Sysproject Reply Srl</h3>
+	<p><strong>👨‍🔧Software Developer</strong><br>
+		<em>June 2002 - September 2003 | Milan, Italy</em>
+	</p>
+	<ul>
+		<li>Developed solutions and web services using Active Server Pages, Visual Basic, XML, XSLT, Javascript, and SQL
+			Server</li>
+	</ul>
+	<h3 id="%F0%9F%8F%A2il-mio-web-spa">🏢IL MIO WEB S.P.A</h3>
+	<p><strong>👨‍🔧Software Developer</strong><br>
+		<em>October 2000 - June 2002 | Milan, Italy</em>
+	</p>
+	<ul>
+		<li>Developed applications and web services using ASP, Visual Basic, XML, Javascript, T-SQL, and SQL Server</li>
+	</ul>
+	<h2 id="%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%8E%93-education">👨🏻‍🎓 Education</h2>
+	<ul>
+		<li>Piacenza, Università Cattolica del Sacro Cuore: Scienze Agrarie (1990 - 1995)</li>
+		<li>Piacenza, ITAS - Raineri (1985 - 1989)</li>
+	</ul>
+	<h2 id="%F0%9F%A5%87-certifications">🥇 Certifications</h2>
+	<ul>
+		<li>dlt Advanced ELT Specialist - 2024
+			<a
+				href="https://github.com/dlt-hub/dlt-certificates/blob/main/certificates/technical_certification/83bf626dc62b6492a5f78f8545506ff8fd69d7f58f2517d90e632cf2cf87f752.md">https://github.com/dlt-hub/dlt-certificates/blob/main/certificates/technical_certification/83bf626dc62b6492a5f78f8545506ff8fd69d7f58f2517d90e632cf2cf87f752.md</a>
+		</li>
+		<li>Process Mining: Data science in Action - 2020
+			<a
+				href="https://www.coursera.org/account/accomplishments/certificate/AD5DC5VQHJSW">https://www.coursera.org/account/accomplishments/certificate/AD5DC5VQHJSW</a>
+		</li>
+		<li>IBM Cloud Core, App Modernization, Reactive Microservices, Kubernetes, Data Science - 2021/2022</li>
+		<li>Microsoft MCP 2.0, Microsoft Certified Application Developer - 2002/2003</li>
+	</ul>
+	<h2 id="%F0%9F%8C%8D-languages">🌍 Languages</h2>
+	<p>Italian (Native), English (Professional Working Proficiency)</p>
+	<h2 id="%F0%9F%97%A3-talks">🗣 Talks</h2>
+	<ul>
+		<li>Enhancing Software Release Reliability by Integrating End-to-End Testing into DevOps Flows (EN)</li>
+		<li>Elevare l'affidabilità nel rilascio del software integrando i Test End-to-End nei flussi DevOps (IT)</li>
+		<li>Strategic Guide for Devs in Building an Application Platform with Net Aspire and Dapr (EN)</li>
+		<li>Guida Strategica per i Devs nella creazione di una Piattaforma Applicativa con Net Aspire e Dapr (IT)</li>
+		<li>Orchestrare Modelli di Linguaggio Avanzati con Semantic Kernel e C# (IT)</li>
+		<li>Creare una Development Platform con Backstage in modalità DevOps (IT)</li>
+		<li>Continuous Deployment su Azure di Modelli Predittivi creati con ML.NET (IT)</li>
+		<li>Information Flow Processing con Dapr in salsa CQRS (EN)</li>
+		<li>Development and Deployment of Microservices with Microsoft Tye (EN)</li>
+		<li>Da DevOps a MLOps con Azure e Github (IT)</li>
+		<li>Enabling DevOps for Machine Learning with Azure Pipelines (IT)</li>
+		<li>DevOps potenziato dall'IA: Ottimizza l'efficienza con suggerimenti intelligenti (IT)</li>
+		<li>Da Crud a Realtime Event-Driven con il pattern &quot;Change Data Capture&quot; (IT)</li>
+		<li>Approcci DevOps per il rilascio continuo di Modelli di Machine Learning su Azure (IT)</li>
+	</ul>
+	<h2 id="%F0%9F%8E%AA-events-online-in-presence">🎪 Events (Online, in-presence)</h2>
+	<ul>
+		<li>Come To Code, Settembre 2024 - Pignola Potenza, Italy</li>
+		<li>Codice Futuro, Settembre 2024 - Officine Credem, Reggio Emilia, Italy</li>
+		<li>DevOpsHeroes 2022 - Parma, Italy</li>
+		<li>Cloudgen 2021</li>
+		<li>Virtual Global Azure - Verona 2021</li>
+		<li>A.I. Day 2021</li>
+		<li>DevOps@Work 2020 - Rome, Italy</li>
+		<li>DevOpsHeroes 2019 - Parma, Italy</li>
+		<li>Test-driven FaaS with Docker @ weDev seminars - Pavia, Italy</li>
+		<li>Serverless framework for &quot;Azure Functions&quot; @ Developer Zone Talk - Bologna, Italy</li>
+		<li>AngularJS Day 2014 - Ancona, Italy</li>
+		<li>Microsoft Developer Camp 2012 - Bologna, Italy</li>
+	</ul>
+	<h2 id="%F0%9F%93%BB-podcast-youtube">📻 Podcast (Youtube)</h2>
+	<ul>
+		<li>
+			<p>DevOps Time - Aumentare la fiducia nei rilasci con i test E2E &gt; <a
+					href="https://www.ugidotnet.org/tv/episodio/3493/Aumentare-la-fiducia-nei-rilasci-con-i-test-E2E/Aumentare-la-fiducia-nei-rilasci-con-i-test-E2E">https://www.ugidotnet.org/tv/episodio/3493/Aumentare-la-fiducia-nei-rilasci-con-i-test-E2E/Aumentare-la-fiducia-nei-rilasci-con-i-test-E2E</a>
+			</p>
+		</li>
+		<li>
+			<p>DevOps verso Platform Engineering (cosa, come, quando e perché) &gt; <a
+					href="https://www.ugidotnet.org/tv/episodio/3080/DevOps-verso-Platform-Engineering-cosa-come-quando-e-perche/DevOps-verso-Platform-Engineering-cosa-come-quando-e-perche">https://www.ugidotnet.org/tv/episodio/3080/DevOps-verso-Platform-Engineering-cosa-come-quando-e-perche/DevOps-verso-Platform-Engineering-cosa-come-quando-e-perche</a>
+			</p>
+		</li>
+	</ul>
+
+</body>
+
+</html>
