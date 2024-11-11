@@ -1,7 +1,29 @@
 # Luca Milan
 
+<style>
+.profile-image {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+</style>
+
 **Technology Innovator, Public Speaker and Strategic Leader in Software Engineering**
-<img src="lm.jpg" alt="Luca Milan" style="float: right; width: 120px;"/>
+<img src="../lm.jpg" alt="Luca Milan" class="profile-image" style="float: right;"/>
 
 **📍 Location**: Piacenza, Italy \
 **🎂 Date of Birth**: 13/11/1970\
