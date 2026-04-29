@@ -12,8 +12,8 @@ This is a static GitHub Pages site — Luca Milan's professional landing page an
 
 **Assets (relative paths required for GitHub Pages):**
 - `icons/` — favicons and site manifest
-- `cv/` — CV or resume documents
-- `md/` — markdown reference materials (e.g., `luca-milan-cv.md`); not actively synced to HTML
+- `cv/` — private CV export staging; do not add direct public links unless explicitly requested
+- `md/` — markdown CV source material; avoid plain-text PII in these files
 - `bg.jpeg`, `lm.jpg` — profile images
 - `*.pdf` — CV PDFs (linked from HTML)
 
@@ -39,8 +39,9 @@ This is a static GitHub Pages site — Luca Milan's professional landing page an
 - Mobile-first: media queries for larger breakpoints
 
 **Assets:**
-- All asset references use relative paths: `icons/filename.png`, `bg.jpeg`, `lm.jpg`, `luca-milan-cv-latest.pdf`
+- All asset references use relative paths: `icons/filename.png`, `bg.jpeg`, `lm.jpg`
 - Verify assets exist in the repository before adding references
+- Avoid publishing direct links to CV files or plain-text email/phone unless the user explicitly asks for public exposure; if email must appear, use a masked human-readable format instead of `mailto:`
 - Note: only `index.html` is currently maintained; the Italian variant (archived) is in `.old/`
 
 ## Playwright MCP for Browser Checks

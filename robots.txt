@@ -1,2 +1,7 @@
 User-agent: *
+Disallow: /cv/
+Disallow: /md/
+Disallow: /old/
+Disallow: /.old/
 Disallow: /*.pdf$
+Disallow: /*.docx$
