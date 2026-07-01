@@ -8,3 +8,10 @@
 .squad-workstream
 # Archival directory: superseded and retired files
 .old/
+# Claude Code: local-only guidance and skills, not for the public repo
+.claude/
+# Public repo minimum: only index.html and its referenced assets are committed.
+# CV source material (markdown and exports) is kept locally only, not published.
+*.md
+*.pdf
+*.docx
