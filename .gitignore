@@ -13,5 +13,6 @@
 # Public repo minimum: only index.html and its referenced assets are committed.
 # CV source material (markdown and exports) is kept locally only, not published.
 *.md
+!README.md
 *.pdf
 *.docx
