@@ -15,4 +15,8 @@
 *.md
 !README.md
 *.pdf
+!posters/agentic-harness-manifest.pdf
+!posters/evoluzione-degli-llm.pdf
 *.docx
+# LinkedIn post attachments: not referenced by the live site, kept local-only
+posters/preview/

@@ -182,6 +182,33 @@
       font-size: 0.88rem;
       font-weight: 600;
     }
+    .book-spotlight {
+      margin-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(56, 189, 248, 0.05));
+      border: 1px solid rgba(101, 211, 255, 0.3);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      width: fit-content;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .book-spotlight:hover { transform: translateY(-1px); border-color: var(--accent-strong); }
+    .book-spotlight-tag {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #04111d;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
     .hero-actions {
       margin-top: 1.75rem;
       display: flex;
@@ -362,6 +389,7 @@
     .timeline-item,
     .cert-card,
     .talk-card,
+    .poster-card,
     .event-item {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -413,6 +441,7 @@
     .skills-grid,
     .cert-grid,
     .talk-grid,
+    .poster-grid,
     .events-grid {
       display: grid;
       gap: 1rem;
@@ -421,12 +450,14 @@
     .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .talk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .events-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
     .leadership-card,
     .skill-card,
     .cert-card,
     .talk-card,
+    .poster-card,
     .event-item {
       padding: 1.25rem;
     }
@@ -515,10 +546,17 @@
     }
 
     .cert-card,
-    .talk-card {
+    .talk-card,
+    .poster-card {
       display: flex;
       flex-direction: column;
       gap: 0.55rem;
+    }
+    .poster-thumb {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .card-link,
     .text-link {
@@ -619,7 +657,8 @@
         grid-template-columns: 1fr;
       }
       .cert-grid,
-      .talk-grid { grid-template-columns: 1fr; }
+      .talk-grid,
+      .poster-grid { grid-template-columns: 1fr; }
       .timeline-meta { text-align: left; }
     }
     @media (max-width: 720px) {
@@ -674,6 +713,11 @@
           <span class="proof-pill">Speaker su DevOps, cloud, .NET, IA</span>
         </div>
 
+        <a class="book-spotlight" href="../books/il-senior-amplificato/">
+          <span class="book-spotlight-tag">Nuovo</span>
+          <span>Il Senior Amplificato — leggi l'anteprima editoriale</span>
+        </a>
+
         <div class="hero-actions">
           <a class="button" href="https://www.linkedin.com/in/lucamilan" target="_blank" rel="noreferrer">Richiedi il CV su LinkedIn</a>
           <a class="button-secondary" href="https://github.com/lucamilan" target="_blank" rel="noreferrer">Vedi il GitHub</a>
@@ -694,7 +738,7 @@
         </div>
 
         <div class="panel-block">
-          <h3>Perché le aziende chiamano</h3>
+          <h3>Perché le aziende lo coinvolgono</h3>
           <ul class="panel-list">
             <li>Guida iniziative di ingegneria e piattaforma senza perdere autorevolezza tecnica.</li>
             <li>Collega delivery, architettura, automazione e cambiamento organizzativo.</li>
@@ -821,7 +865,7 @@
               <h3 class="timeline-role">Aperto a ruoli Fractional / Advisory — Tecnologia e IA</h3>
               <div class="timeline-company">Disponibile per nuovi incarichi</div>
             </div>
-            <div class="timeline-meta">Da Giugno 2026<br>Milano, Italia</div>
+            <div class="timeline-meta">Da Gennaio 2027<br>Milano, Italia</div>
           </div>
           <ul>
             <li>Disponibile per incarichi come fractional CTO / advisor tecnologico con aziende che modernizzano piattaforma, delivery e organizzazione dei team ingegneristici.</li>
@@ -999,6 +1043,21 @@
         <article class="cert-card">
           <h3>IBM Cloud · Kubernetes · Data Science / Microsoft MCAD</h3>
           <p>2021–2022 · IBM · 2002–2003 · Microsoft</p>
+        </article>
+      </div>
+
+      <div class="poster-grid" style="margin-bottom: 1rem;">
+        <article class="poster-card">
+          <img class="poster-thumb" src="../posters/img/agentic-harness-manifest-thumb.png" alt="Anteprima poster Agentic Harness Manifest">
+          <h3>Agentic Harness Manifest</h3>
+          <p>Poster · Inglese</p>
+          <a class="card-link" href="../posters/agentic-harness-manifest.pdf" target="_blank" rel="noreferrer">Scarica il PDF ↗</a>
+        </article>
+        <article class="poster-card">
+          <img class="poster-thumb" src="../posters/img/evoluzione-degli-llm-thumb.png" alt="Anteprima poster Evoluzione degli LLM">
+          <h3>Evoluzione degli LLM — da base ad agente</h3>
+          <p>L'evoluzione dei modelli linguistici, dai modelli base agli agenti.</p>
+          <a class="card-link" href="../posters/evoluzione-degli-llm.pdf" target="_blank" rel="noreferrer">Scarica il PDF ↗</a>
         </article>
       </div>
 
